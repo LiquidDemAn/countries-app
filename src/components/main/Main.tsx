@@ -1,10 +1,13 @@
 import { Container } from '../container';
 import { Controls } from '../controls';
+import { Wrapper } from './main.styled';
 
 export const Main = () => {
 	return (
-		<Container>
-			<Controls />
-		</Container>
+		<Wrapper>
+			<Container>
+				<Controls />
+			</Container>
+		</Wrapper>
 	);
 };
