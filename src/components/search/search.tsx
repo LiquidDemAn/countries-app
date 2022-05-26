@@ -4,7 +4,8 @@ import { SearchContainer, SearchInput } from './search.styled';
 export const Search = () => {
 	return (
 		<SearchContainer>
-			<SearchInput></SearchInput>
+			<IoSearch />
+			<SearchInput />
 		</SearchContainer>
 	);
 };

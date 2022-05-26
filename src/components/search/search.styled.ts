@@ -21,6 +21,5 @@ export const SearchInput = styled.input.attrs({
 })`
 	border: none;
 	outline: none;
-	background-color: var(--colors-bg);
 	color: var(--colors-text);
 `;
