@@ -5,23 +5,36 @@ export const FilterSelect = styled(Select).attrs({
 	styles: {
 		control: (provided) => ({
 			...provided,
+			width: '200px',
+			height: '50px',
+			padding: '0.25rem',
 			backgroundColor: 'var(--colors-ui-base)',
 			color: 'var(--colors-text)',
 			borderRadius: 'var(--radius)',
-			padding: '0.25rem',
 			border: 'none',
 			boxShadow: 'var(--shadow)',
-			height: '50px',
+			cursor: 'pointer',
 		}),
 
 		option: (provided, state) => ({
 			...provided,
 			cursor: 'pointer',
 			color: 'var(--colors-text)',
-			backgroundColor: 'var(--colors-bg)',
-			// backgroundColor: state.isSelected
-			// ? 'var(--colors-bg)'
-			// : 'var(--colors-ui-base)',
+			backgroundColor: state.isSelected
+				? 'var(--colors-bg)'
+				: 'var(--colors-ui-base)',
 		}),
 	},
-})``;
+})`
+	& > * {
+		box-shadow: var(--shadow);
+	}
+
+	& * {
+		color: var(--colors-text) !important;
+	}
+
+	& > div[id] {
+		background-color: var(--colors-ui-base);
+	}
+`;
