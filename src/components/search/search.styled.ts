@@ -4,7 +4,7 @@ export const SearchContainer = styled.label`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 100%;
+	width: 200px;
 	padding: 1rem 2rem;
 	background-color: var(--colors-ui-base);
 	border-radius: var(--radius);
@@ -21,5 +21,6 @@ export const SearchInput = styled.input.attrs({
 })`
 	border: none;
 	outline: none;
+	background-color: var(--colors-ui-base);
 	color: var(--colors-text);
 `;
