@@ -1,4 +1,4 @@
-import { AllCountriesType } from '../../pages/homepage/services/typedef';
+import { CountryCardType } from '../../pages/homepage/services/typedef';
 import {
 	CardBody,
 	CardImage,
@@ -9,19 +9,21 @@ import {
 } from './country-card.styled';
 
 type Props = {
-	country: AllCountriesType;
+	country: CountryCardType;
 };
 
 export const CountryCard = ({ country }: Props) => {
 	return (
 		<CardWrapper>
-			<CardImage />
+			<CardImage src={country.flag} alt={country.name} />
 			<CardBody>
 				<CardTitle>{country.name}</CardTitle>
 				<CardInfo>
-					<CardInfoItem>Population: {country.population}</CardInfoItem>
-					<CardInfoItem>Region: {country.region}</CardInfoItem>
-					<CardInfoItem>Capital: {country.capital}</CardInfoItem>
+					{country.info.map((item) => (
+						<CardInfoItem key={item.title}>
+							<span>{item.title}</span>: {item.description}
+						</CardInfoItem>
+					))}
 				</CardInfo>
 			</CardBody>
 		</CardWrapper>
