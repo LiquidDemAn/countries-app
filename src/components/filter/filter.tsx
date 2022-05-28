@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FilterSelect } from './filter.styled';
 
-const options = [
+type Option = { value: string; label: string };
+
+const options: Option[] = [
 	{ value: 'Africa', label: 'Africa' },
 	{ value: 'America', label: 'America' },
 	{ value: 'Asia', label: 'Asia' },
@@ -15,8 +17,6 @@ export const Filter = () => {
 	const onChange = (newValue: any) => {
 		setRegion(newValue);
 	};
-
-	console.log(region);
 
 	return (
 		<FilterSelect
