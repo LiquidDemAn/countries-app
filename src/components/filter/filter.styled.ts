@@ -35,6 +35,6 @@ export const FilterSelect = styled(Select).attrs({
 	}
 
 	& > div[id] {
-		background-color: var(--colors-ui-base);
+		background-color: var(--colors-bg);
 	}
 `;
