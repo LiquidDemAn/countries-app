@@ -1,7 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { HomePageStateType } from './typedef';
 
-const initialState: HomePageStateType = {};
+const initialState: HomePageStateType = {
+    allCountries: []
+};
 
 export const homepage = createSlice({
 	name: 'homepage',
