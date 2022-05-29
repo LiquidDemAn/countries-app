@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
-import { getAllCountries } from '../../pages/home-page/services/selectors';
-import { useAppSelector } from '../../store/hooks';
+import { CountryCardType } from '../../pages/home-page/services/typedef';
 import { CountryCard } from '../country-card';
 import { CountriesListWrapper } from './countries-list.styled';
 
-export const CountriesList = () => {
-	const countries = useAppSelector(getAllCountries);
+type Props = {
+	countries: CountryCardType[];
+};
 
+export const CountriesList = ({ countries }: Props) => {
 	return (
 		<CountriesListWrapper>
 			{countries.map((country) => (

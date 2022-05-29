@@ -1,12 +1,10 @@
-import { Filter } from '../filter';
-import { Search } from '../search';
+import { ReactElement } from 'react';
 import { ControlsWrapper } from './controls.styled';
 
-export const Controls = () => {
-	return (
-		<ControlsWrapper>
-			<Search />
-			<Filter />
-		</ControlsWrapper>
-	);
+type Props = {
+	children: ReactElement | ReactElement[];
+};
+
+export const Controls = ({ children }: Props) => {
+	return <ControlsWrapper>{children}</ControlsWrapper>;
 };

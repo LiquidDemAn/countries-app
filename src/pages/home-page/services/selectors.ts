@@ -1,10 +1,27 @@
+import { FilterOptionType } from '../../../components/filter/filter-options';
 import { CountryCardType } from './typedef';
 import { AppState } from '../../../store/typedef';
 
-export const getAllCountries = (state: AppState) => {
-	const countries = state.homepage.allCountries;
+export const getAllCountries = (state: AppState) => state.homepage.allCountries;
 
-	const result: CountryCardType [] = countries.map(({ name, capital, flags, region, population }) => {
+export const getFilteredCountries = (
+	state: AppState,
+	region: null | FilterOptionType,
+	search: string
+): CountryCardType[] => {
+	let countries = getAllCountries(state);
+
+	if (region) {
+		countries = countries.filter((country) => country.region === region.label);
+	}
+
+	if (search) {
+		countries = countries.filter((country) =>
+			country.name.toLowerCase().includes(search.toLowerCase())
+		);
+	}
+
+	return countries.map(({ name, capital, flags, region, population }) => {
 		return {
 			name,
 			flag: flags.png,
@@ -13,9 +30,6 @@ export const getAllCountries = (state: AppState) => {
 				{ title: 'Region', description: region },
 				{ title: 'Capital', description: capital },
 			],
-		}
+		};
 	});
-
-    return result;
 };
-

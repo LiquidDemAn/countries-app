@@ -1,1 +1,1 @@
-export { Filter } from './filter';
+export { FilterSelect } from './filter.styled';

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-
 import { Link } from 'react-router-dom';
 
 export const HeaderEl = styled.header`
@@ -14,7 +13,7 @@ export const HeaderWrapper = styled.div`
 	padding: 2rem 0;
 `;
 
-export const HeaderTitle = styled.a.attrs({
+export const HeaderTitle = styled(Link).attrs({
 	to: '/',
 })`
 	color: var(--colors-text);
@@ -22,17 +21,6 @@ export const HeaderTitle = styled.a.attrs({
 	text-decoration: none;
 	font-weight: var(--fw-bold);
 `;
-
-// export const HeaderTitle = styled(Link).attrs({
-// 	to: '/',
-// })`
-// 	color: var(--colors-text);
-// 	font-size: var(--fs-sm);
-// 	text-decoration: none;
-// 	font-weight: var(--fw-bold);
-// `;
-
-// export const HeaderTitle = styled.h1``;
 
 export const ModeSwitcher = styled.div`
 	display: flex;
