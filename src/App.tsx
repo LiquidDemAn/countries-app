@@ -1,13 +1,14 @@
-import { Header } from './components/header';
-import { Main } from './components/main';
+import { Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './store/store';
+import { Homepage } from './pages/homepage';
 
 function App() {
 	return (
 		<Provider store={store}>
-			<Header />
-			<Main />
+			<Routes>
+				<Route path='/' element={<Homepage />} />
+			</Routes>
 		</Provider>
 	);
 }
