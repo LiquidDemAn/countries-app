@@ -7,6 +7,11 @@ export const CardWrapper = styled.article`
 	box-shadow: var(--shadow);
 	cursor: pointer;
 	overflow: hidden;
+	transition: 0.2s ease-in all;
+
+	&:hover {
+		transform: scale(1.1);
+	}
 `;
 
 export const CardImage = styled.img`

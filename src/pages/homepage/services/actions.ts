@@ -1,4 +1,4 @@
-import { ALL_COUNTRIES } from './../../../config';
+import { ALL_COUNTRIES } from '../../../config';
 import { AllCountriesType } from './typedef';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
