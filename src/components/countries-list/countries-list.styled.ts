@@ -7,6 +7,11 @@ export const CountriesListWrapper = styled.section`
 	row-gap: 30px;
 	column-gap: 58.5px;
 
+	& > a {
+		text-decoration: none;
+		color: var(--colors-text);
+	}
+
 	@media (min-width: 767px) {
 	}
 `;

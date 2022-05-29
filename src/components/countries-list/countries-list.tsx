@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { getAllCountries } from '../../pages/home-page/services/selectors';
 import { useAppSelector } from '../../store/hooks';
 import { CountryCard } from '../country-card';
@@ -9,7 +10,9 @@ export const CountriesList = () => {
 	return (
 		<CountriesListWrapper>
 			{countries.map((country) => (
-				<CountryCard country={country} />
+				<Link key={country.name} to={`country/${country.name}`}>
+					<CountryCard country={country} />
+				</Link>
 			))}
 		</CountriesListWrapper>
 	);
