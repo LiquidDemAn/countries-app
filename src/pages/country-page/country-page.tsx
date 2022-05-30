@@ -1,13 +1,28 @@
 import { useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { IoArrowBack } from 'react-icons/io5';
+import { Button } from '../../components/button';
+import { Main } from '../../components/main';
 import { useAppDispatch } from '../../store/hooks';
 import { loadCountryInfo } from './services/actions';
 
 export const CountryPage = () => {
-	// const dispatch = useAppDispatch();
+	const dispatch = useAppDispatch();
+	const { name } = useParams();
+	const navigate = useNavigate();
 
-	// useEffect(() => {
-	// 	dispatch(loadCountryInfo('ukraine'));
-	// }, [dispatch]);
+	const goBack = () => navigate(-1);
 
-	return <>Countrypagesadasd</>;
+	useEffect(() => {
+		dispatch(loadCountryInfo(name!));
+	}, [dispatch, name]);
+
+	return (
+		<Main>
+			<Button onClick={goBack}>
+				<IoArrowBack />
+				Back
+			</Button>
+		</Main>
+	);
 };
