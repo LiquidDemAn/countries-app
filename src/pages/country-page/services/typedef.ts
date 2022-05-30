@@ -11,6 +11,11 @@ type LanguagesType = {
 	nativeName: string;
 };
 
+type ListItemType = {
+	title: string;
+	description: string | string[] | number;
+};
+
 export type CountryInfoFromServerType = {
 	name: string;
 	topLevelDomain: string[];
@@ -33,18 +38,8 @@ export type CountryInfoType = {
 	name: string;
 	flag: string;
 	borders: string[];
-	leftList: {
-		nativeName: string;
-		population: number;
-		region: string;
-		subregion: string;
-		capital: string;
-	};
-	rightList: {
-		topLevelDomain: string[];
-		currencies: string[];
-		languages: string[];
-	};
+	leftList: ListItemType[];
+	rightList: ListItemType[];
 };
 
 export type CountryPageStateType = {
