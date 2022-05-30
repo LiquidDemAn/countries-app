@@ -26,6 +26,7 @@ export type CountryInfoType = {
 	};
 	currencies: CurrenciesType[];
 	languages: LanguagesType[];
+	independent: boolean;
 };
 
 export type CountryPageStateType = {
