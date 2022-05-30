@@ -6,6 +6,7 @@ import { Main } from '../../components/main';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { loadCountryInfo } from './services/actions';
 import { getCountryInfo } from './services/selectors';
+import { CountryInfo } from '../../components/country-info';
 
 export const CountryPage = () => {
 	const dispatch = useAppDispatch();
@@ -25,6 +26,7 @@ export const CountryPage = () => {
 				<IoArrowBack />
 				Back
 			</Button>
+			<>{country && <CountryInfo country={country} />}</>
 		</Main>
 	);
 };
