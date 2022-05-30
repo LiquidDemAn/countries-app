@@ -11,7 +11,7 @@ type LanguagesType = {
 	nativeName: string;
 };
 
-export type CountryInfoType = {
+export type CountryInfoFromServerType = {
 	name: string;
 	topLevelDomain: string[];
 	capital: string;
@@ -29,6 +29,24 @@ export type CountryInfoType = {
 	independent: boolean;
 };
 
+export type CountryInfoType = {
+	name: string;
+	flag: string;
+	borders: string[];
+	leftList: {
+		nativeName: string;
+		population: number;
+		region: string;
+		subregion: string;
+		capital: string;
+	};
+	rightList: {
+		topLevelDomain: string[];
+		currencies: string[];
+		languages: string[];
+	};
+};
+
 export type CountryPageStateType = {
-	countryInfo?: CountryInfoType | CountryInfoType[];
+	countryInfo?: CountryInfoType;
 };
