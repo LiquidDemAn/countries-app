@@ -30,7 +30,7 @@ export const InfoImage = styled.img`
 	}
 
 	@media (min-width: 1024px) {
-		max-width: 100%;
+		width: 540px;
 		height: 350px;
 	}
 `;
@@ -96,6 +96,8 @@ export const BordersTitle = styled.span`
 
 export const BordersList = styled.ul`
 	display: flex;
+	flex-wrap: wrap;
+	row-gap: 0.75rem;
 	list-style: none;
 	padding: 0;
 	column-gap: 0.5rem;
@@ -105,4 +107,15 @@ export const BordersList = styled.ul`
 	}
 `;
 
-export const BorderListItem = styled.li``;
+export const BorderListItem = styled.li`
+	padding: 0.25rem 1rem;
+	background-color: var(--colors-ui-base);
+	box-shadow: var(--shadow);
+	cursor: pointer;
+
+	transition: 0.2s ease-in all;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+`;

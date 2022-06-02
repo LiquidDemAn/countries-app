@@ -44,4 +44,5 @@ export type CountryInfoType = {
 
 export type CountryPageStateType = {
 	countryInfo?: CountryInfoType;
+	countryNeighbors: string[];
 };

@@ -1,3 +1,4 @@
+import { Link, NavigateFunction } from 'react-router-dom';
 import { CountryInfoType } from '../../pages/country-page/services/typedef';
 import {
 	Wrapper,
@@ -15,9 +16,11 @@ import {
 
 type Props = {
 	country: CountryInfoType;
+	neighbors: string[];
+	navigate: NavigateFunction;
 };
 
-export const CountryInfo = ({ country }: Props) => {
+export const CountryInfo = ({ country, neighbors, navigate }: Props) => {
 	return (
 		<Wrapper>
 			<InfoImage src={country.flag} alt={country.name} />
@@ -51,8 +54,10 @@ export const CountryInfo = ({ country }: Props) => {
 				<Borders>
 					<BordersTitle>Border Countries:</BordersTitle>
 					<BordersList>
-						{country.borders.map((item) => (
-							<BorderListItem key={item}>{item}</BorderListItem>
+						{neighbors.map((name) => (
+							<BorderListItem onClick={() => navigate(`/country/${name}`)}>
+								{name}
+							</BorderListItem>
 						))}
 					</BordersList>
 				</Borders>
