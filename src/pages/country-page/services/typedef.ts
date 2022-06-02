@@ -1,3 +1,5 @@
+import { ListItemType } from '../../../typedef';
+
 type CurrenciesType = {
 	code: string;
 	name: string;
@@ -9,11 +11,6 @@ type LanguagesType = {
 	iso639_2: string;
 	name: string;
 	nativeName: string;
-};
-
-type ListItemType = {
-	title: string;
-	description: string | string[] | number;
 };
 
 export type CountryInfoFromServerType = {

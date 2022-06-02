@@ -1,3 +1,5 @@
+import { ListItemType } from '../../../typedef';
+
 export type AllCountriesType = {
 	name: string;
 	capital: string;
@@ -13,13 +15,7 @@ export type AllCountriesType = {
 export type CountryCardType = {
 	name: string;
 	flag: string;
-    info: ({
-        title: string;
-        description: number;
-    } | {
-        title: string;
-        description: string;
-    })[];
+	info: ListItemType | ListItemType[];
 };
 
 export type HomePageStateType = {
