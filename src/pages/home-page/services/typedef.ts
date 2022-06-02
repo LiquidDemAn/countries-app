@@ -15,7 +15,7 @@ export type AllCountriesType = {
 export type CountryCardType = {
 	name: string;
 	flag: string;
-	info: ListItemType | ListItemType[];
+	info: ListItemType[];
 };
 
 export type HomePageStateType = {
