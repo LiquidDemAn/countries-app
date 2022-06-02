@@ -43,6 +43,6 @@ export const countryPage = createSlice({
 				};
 			})
 			.addCase(loadCountryNeighbors.fulfilled, (state, { payload }) => {
-				state.countryNeighbors = payload;
+				state.countryNeighbors = payload || [];
 			}),
 });

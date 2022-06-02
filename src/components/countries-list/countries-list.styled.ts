@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 
 export const CountriesListWrapper = styled.section`
-	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
-	row-gap: 30px;
-	column-gap: 58.5px;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	row-gap: 2rem;
+	column-gap: 2rem;
 
 	& > a {
 		text-decoration: none;
@@ -13,5 +16,6 @@ export const CountriesListWrapper = styled.section`
 	}
 
 	@media (min-width: 767px) {
+		flex-direction: row;
 	}
 `;

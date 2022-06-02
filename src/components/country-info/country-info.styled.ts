@@ -11,27 +11,35 @@ export const Wrapper = styled.section`
 
 	@media (min-width: 767px) {
 		flex-direction: row;
+		align-items: flex-start;
+	}
+
+	@media (min-width: 992px) {
+		align-items: center;
 	}
 `;
 
 export const InfoImage = styled.img`
 	display: block;
-	width: 320px;
+	max-width: 100%;
 	height: auto;
 	object-fit: cover;
 	margin-bottom: 3rem;
 
 	@media (min-width: 576px) {
-		width: 450px;
+		max-width: 450px;
 	}
 
 	@media (min-width: 767px) {
 		margin-bottom: 0;
 	}
 
-	@media (min-width: 1024px) {
-		width: 540px;
+	@media (min-width: 992px) {
 		height: 350px;
+	}
+
+	@media (min-width: 1024px) {
+		max-width: 540px;
 	}
 `;
 
@@ -48,7 +56,7 @@ export const InfoWrapper = styled.div`
 	width: auto;
 
 	@media (min-width: 576px) {
-		width: 530px;
+		max-width: 530px;
 	}
 `;
 

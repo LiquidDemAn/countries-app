@@ -1,4 +1,4 @@
-import { Link, NavigateFunction } from 'react-router-dom';
+import { NavigateFunction } from 'react-router-dom';
 import { CountryInfoType } from '../../pages/country-page/services/typedef';
 import {
 	Wrapper,
