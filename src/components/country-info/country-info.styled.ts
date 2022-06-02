@@ -3,31 +3,64 @@ import styled from 'styled-components';
 export const Wrapper = styled.section`
 	display: flex;
 	align-items: center;
+	flex-direction: column;
+	column-gap: 20px;
 	margin-top: 3rem;
 	justify-content: space-between;
 	width: 100%;
+
+	@media (min-width: 767px) {
+		flex-direction: row;
+	}
 `;
 
 export const InfoImage = styled.img`
 	display: block;
-	width: 530px;
-	height: 350px;
+	width: 320px;
+	height: auto;
 	object-fit: cover;
+	margin-bottom: 3rem;
+
+	@media (min-width: 576px) {
+		width: 450px;
+	}
+
+	@media (min-width: 767px) {
+		margin-bottom: 0;
+	}
+
+	@media (min-width: 1024px) {
+		max-width: 100%;
+		height: 350px;
+	}
 `;
 
 export const Title = styled.h2`
-	margin: 0 0 1.5rem;
+	margin: 0 0 0.75rem;
 	font-weight: var(--fw-bold);
+
+	@media (min-width: 1024px) {
+		margin: 0 0 1.5rem;
+	}
 `;
 
 export const InfoWrapper = styled.div`
-	width: 530px;
+	width: auto;
+
+	@media (min-width: 576px) {
+		width: 530px;
+	}
 `;
 
 export const ListGroup = styled.div`
 	display: flex;
-	width: 100%;
 	justify-content: space-between;
+	flex-direction: column;
+	row-gap: 2rem;
+
+	@media (min-width: 576px) {
+		flex-direction: row;
+	}
 `;
 
 export const List = styled.ul`
@@ -47,8 +80,14 @@ export const ListItem = styled.li`
 export const Borders = styled.div`
 	display: flex;
 	align-items: center;
-	margin-top: 2.5rem;
-	column-gap: 1rem;
+	flex-wrap: wrap;
+	margin-top: 1rem;
+	column-gap: 0.5rem;
+
+	@media (min-width: 1024px) {
+		margin-top: 2.5rem;
+		column-gap: 1rem;
+	}
 `;
 
 export const BordersTitle = styled.span`
@@ -59,7 +98,11 @@ export const BordersList = styled.ul`
 	display: flex;
 	list-style: none;
 	padding: 0;
-	column-gap: 1rem;
+	column-gap: 0.5rem;
+
+	@media (min-width: 1024px) {
+		column-gap: 1rem;
+	}
 `;
 
 export const BorderListItem = styled.li``;
