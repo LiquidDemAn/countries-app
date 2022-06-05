@@ -5,6 +5,7 @@ import { HomePage } from './pages/home-page';
 import { NotFoundPage } from './pages/not-found-page';
 import { CountryPage } from './pages/country-page';
 import { Layout } from './components/layout';
+import { RandomCountryPage } from './pages/random-country-page';
 
 function App() {
 	return (
@@ -12,6 +13,7 @@ function App() {
 			<Routes>
 				<Route path='/' element={<Layout />}>
 					<Route index element={<HomePage />} />
+					<Route path='random-country' element={<RandomCountryPage />} />
 					<Route path='country/:name' element={<CountryPage />} />
 					<Route path='*' element={<NotFoundPage />} />
 				</Route>
