@@ -56,7 +56,7 @@ export const InfoWrapper = styled.div`
 	width: auto;
 
 	@media (min-width: 576px) {
-		max-width: 530px;
+		width: 530px;
 	}
 `;
 

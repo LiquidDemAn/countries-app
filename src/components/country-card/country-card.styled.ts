@@ -14,6 +14,10 @@ export const CardWrapper = styled.article`
 	}
 `;
 
+export const CardEmptyElement = styled(CardWrapper)`
+	visibility: hidden;
+`;
+
 export const CardImage = styled.img`
 	display: block;
 	width: 100%;
