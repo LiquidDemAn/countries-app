@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { groupeCountryInfo } from '../../../functions/groupe-country-info';
 import { loadCountryInfo, loadCountryNeighbors } from './actions';
 import { CountryPageStateType } from './typedef';
 
@@ -13,34 +14,7 @@ export const countryPage = createSlice({
 	extraReducers: (bulider) =>
 		bulider
 			.addCase(loadCountryInfo.fulfilled, (state, { payload }) => {
-				state.countryInfo = {
-					name: payload.name,
-					flag: payload.flags.png,
-					borders: payload.borders || [],
-					leftList:
-						[
-							{ title: 'Native Name', description: payload.nativeName },
-							{ title: 'Population', description: payload.population },
-							{ title: 'Region', description: payload.region },
-							{ title: 'Sub Region', description: payload.subregion },
-							{ title: 'Capital', description: payload.capital },
-						] || [],
-					rightList:
-						[
-							{
-								title: 'Top Level Domain',
-								description: payload.topLevelDomain,
-							},
-							{
-								title: 'Currencies',
-								description: payload.currencies.map((item) => item.name),
-							},
-							{
-								title: 'Languages',
-								description: payload.languages.map((item) => item.name),
-							},
-						] || [],
-				};
+				state.countryInfo = groupeCountryInfo(payload)
 			})
 			.addCase(loadCountryNeighbors.fulfilled, (state, { payload }) => {
 				state.countryNeighbors = payload || [];
