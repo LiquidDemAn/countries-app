@@ -5,3 +5,4 @@ export const COUNTRY_URL = (name: string) => {
 };
 export const COUNTRY_NEIGHBORS_URL = (codes: string[]) =>
 	`${BASE_URL}alpha?codes=${codes.join(',')}`;
+export const COUNTRIES_NAMES_URL = `${BASE_URL}all?fields=name`;
