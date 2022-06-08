@@ -15,6 +15,7 @@ import {
 	loadRandomCountryNeighbors,
 } from './services/actions';
 import { CountryInfo } from '../../components/country-info';
+import { TitleWrapper } from './random-country-page.styled';
 
 export const RandomCountryPage = () => {
 	const dispatch = useAppDispatch();
@@ -25,7 +26,6 @@ export const RandomCountryPage = () => {
 
 	const toggle = () => {
 		const randomIndex = getRandomIndex(countriesNames.length);
-		console.log(randomIndex);
 		dispatch(loadRandomCountry(countriesNames[randomIndex]));
 	};
 
@@ -42,9 +42,10 @@ export const RandomCountryPage = () => {
 	return (
 		<Main>
 			<>
-				Random Country Page <IoDice onClick={toggle} />
-			</>
-			<>
+				<TitleWrapper>
+					<span>Click on dice to get random country:</span>
+					<IoDice onClick={toggle} />
+				</TitleWrapper>
 				{country && (
 					<CountryInfo
 						neighbors={neighbors}

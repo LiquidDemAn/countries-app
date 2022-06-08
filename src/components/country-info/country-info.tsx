@@ -55,7 +55,7 @@ export const CountryInfo = ({ country, neighbors, navigate }: Props) => {
 					<BordersTitle>Border Countries:</BordersTitle>
 					<BordersList>
 						{neighbors.map((name) => (
-							<BorderListItem onClick={() => navigate(`/country/${name}`)}>
+							<BorderListItem key={name} onClick={() => navigate(`/country/${name}`)}>
 								{name}
 							</BorderListItem>
 						))}
