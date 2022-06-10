@@ -1,6 +1,7 @@
 import { IoMoon, IoMoonOutline } from 'react-icons/io5';
 import { useState, useEffect } from 'react';
 import { Container } from '../container';
+import { MenuComponent } from '../menu';
 import {
 	HeaderEl,
 	HeaderWrapper,
@@ -26,6 +27,7 @@ export const Header = () => {
 			<Container>
 				<HeaderWrapper>
 					<HeaderTitle>Where is the world?</HeaderTitle>
+					<MenuComponent />
 					<ModeSwitcher onClick={toggleTheme}>
 						{theme === 'light' ? <IoMoonOutline /> : <IoMoon />}
 						<span>{theme} Theme</span>

@@ -16,10 +16,15 @@ export const HeaderWrapper = styled.div`
 export const HeaderTitle = styled(Link).attrs({
 	to: '/',
 })`
+	display: none;
 	color: var(--colors-text);
 	font-size: var(--fs-sm);
 	text-decoration: none;
 	font-weight: var(--fw-bold);
+
+	@media(min-width: 767px) {
+		display: block;
+	}
 `;
 
 export const ModeSwitcher = styled.div`
@@ -29,6 +34,6 @@ export const ModeSwitcher = styled.div`
 	color: var(--colors-text);
 	font-size: var(--fs-sm);
 	font-weight: var(--fw-bold);
-    text-transform: capitalize;
+	text-transform: capitalize;
 	cursor: pointer;
 `;
