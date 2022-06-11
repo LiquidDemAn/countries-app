@@ -1,20 +1,14 @@
 import axios from 'axios';
 import { CountryInfoFromServerType } from '../../country-page/services/typedef';
 import {
-	COUNTRIES_NAMES_URL,
 	COUNTRY_URL,
 	COUNTRY_NEIGHBORS_URL,
 } from './../../../config';
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { loadCountriesNamesAction } from '../../actions/actions';
 
-export const loadCountriesNames = createAsyncThunk<string[]>(
-	'random-country-page/load-countries-names',
-	async () => {
-		const response = await axios.get(COUNTRIES_NAMES_URL);
-		return await response.data.map(
-			(item: { name: string; independent: boolean }) => item.name
-		);
-	}
+export const loadCountriesNames = loadCountriesNamesAction(
+	'random-country-page/load-countries-names'
 );
 
 export const loadRandomCountry = createAsyncThunk<

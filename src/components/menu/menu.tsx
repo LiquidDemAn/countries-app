@@ -40,7 +40,11 @@ export const MenuComponent = () => {
 				<MenuItem onClick={handleClose}>
 					<LinkWrapper to='/random-country'>RandomCountry</LinkWrapper>
 				</MenuItem>
+				<MenuItem onClick={handleClose}>
+					<LinkWrapper to='/comparison-countries'>ComparisonCountries</LinkWrapper>
+				</MenuItem>
 			</Menu>
 		</div>
 	);
 };
+
