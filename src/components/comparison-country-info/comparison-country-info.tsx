@@ -8,7 +8,11 @@ type Props = {
 	onChange: (newValue: unknown) => void;
 };
 
-export const ComparisonCountryInfo = ({ options, selectName,  onChange}: Props) => {
+export const ComparisonCountryInfo = ({
+	options,
+	selectName,
+	onChange,
+}: Props) => {
 	return (
 		<Wrapper>
 			<span>{selectName}:</span>

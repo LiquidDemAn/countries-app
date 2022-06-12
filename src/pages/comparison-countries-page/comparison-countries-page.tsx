@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Main } from '../../components/main';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { loadCountriesNames } from '../../global-services/actions';
 import { getCountriesNamesOptions } from '../../global-services/selectors';
 import { ComparisonCountryInfo } from '../../components/comparison-country-info';
 import { ComparisonCountriesWrapper } from './comparison-countries-page.styled';
+import { loadFirstCountry, loadSecondCountry } from './services/actions';
 import { SelectOptionType } from '../../typedef';
 
 export const ComparisonCountriesPage = () => {
@@ -12,11 +13,15 @@ export const ComparisonCountriesPage = () => {
 	const options = useAppSelector(getCountriesNamesOptions);
 
 	const selectFirstCountry = (newValue: unknown) => {
-		console.log(newValue);
+		if (newValue) {
+			dispatch(loadFirstCountry(newValue as SelectOptionType));
+		}
 	};
 
 	const selectSecondCountry = (newValue: unknown) => {
-		console.log(newValue);
+		if (newValue) {
+			dispatch(loadSecondCountry(newValue as SelectOptionType));
+		}
 	};
 
 	useEffect(() => {

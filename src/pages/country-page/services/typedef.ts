@@ -1,17 +1,4 @@
-import { ListItemType } from '../../../typedef';
-
-type CurrenciesType = {
-	code: string;
-	name: string;
-	symbol: string;
-};
-
-type LanguagesType = {
-	iso639_1: string;
-	iso639_2: string;
-	name: string;
-	nativeName: string;
-};
+import { ListItemType, FlagType, CurrencieType, LanguageType } from '../../../typedef';
 
 export type CountryInfoFromServerType = {
 	name: string;
@@ -22,12 +9,9 @@ export type CountryInfoFromServerType = {
 	population: number;
 	borders: string[];
 	nativeName: string;
-	flags: {
-		svg: string;
-		png: string;
-	};
-	currencies: CurrenciesType[];
-	languages: LanguagesType[];
+	flags: FlagType;
+	currencies: CurrencieType[];
+	languages: LanguageType[];
 	independent: boolean;
 };
 
