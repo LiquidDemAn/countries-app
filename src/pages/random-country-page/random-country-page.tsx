@@ -3,19 +3,19 @@ import { getRandomIndex } from './../../functions/random-index';
 import { IoDice } from 'react-icons/io5';
 import { useNavigate } from 'react-router-dom';
 import {
-	getCountriesNames,
 	getRandomCountry,
 	getRandomCountryNeighbors,
 } from './services/selectors';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { useEffect } from 'react';
 import {
-	loadCountriesNames,
 	loadRandomCountry,
 	loadRandomCountryNeighbors,
 } from './services/actions';
+import { getCountriesNames } from '../../global-services/selectors';
 import { CountryInfo } from '../../components/country-info';
 import { TitleWrapper } from './random-country-page.styled';
+import { loadCountriesNames } from '../../global-services/actions';
 
 export const RandomCountryPage = () => {
 	const dispatch = useAppDispatch();
@@ -30,8 +30,10 @@ export const RandomCountryPage = () => {
 	};
 
 	useEffect(() => {
-		dispatch(loadCountriesNames());
-	}, [dispatch]);
+		if (!countriesNames.length) {
+			dispatch(loadCountriesNames());
+		}
+	}, [dispatch, countriesNames]);
 
 	useEffect(() => {
 		if (country?.borders) {

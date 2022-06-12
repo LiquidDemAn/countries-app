@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 import { CountiresSelect } from '../../components/countries-select';
 import { Main } from '../../components/main';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
-import { loadCountriesNames } from './services/actions';
-import { getCountriesNamesOptions } from './services/selectors';
+import { loadCountriesNames } from '../../global-services/actions';
+import { getCountriesNamesOptions } from '../../global-services/selectors';
 
 export const ComparisonCountriesPage = () => {
 	const dispatch = useAppDispatch();

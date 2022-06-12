@@ -1,4 +1,3 @@
-import { loadCountriesNames } from './actions';
 import { createSlice } from '@reduxjs/toolkit';
 import { ComparisonCountriesPageStateType } from './typedef';
 
@@ -10,8 +9,8 @@ export const comparisonCountriesPage = createSlice({
 	name: 'comparison-countries-page',
 	initialState,
 	reducers: {},
-	extraReducers: (buidder) =>
-		buidder.addCase(loadCountriesNames.fulfilled, (state, { payload }) => {
-			state.countriesNames = payload;
-		}),
+	// extraReducers: (buidder) =>
+	// 	buidder.addCase(loadCountriesNames.fulfilled, (state, { payload }) => {
+	// 		state.countriesNames = payload;
+	// 	}),
 });
