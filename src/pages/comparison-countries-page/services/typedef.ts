@@ -2,9 +2,9 @@ import { CurrencieType, FlagType, LanguageType } from '../../../typedef';
 
 export type ComparisonCountryInfoType = {
 	name: string;
-	population: string;
-	area: string;
-	borders: string[];
+	population: number;
+	area: number;
+	borders?: string[];
 	flags: FlagType;
 	currencies: CurrencieType[];
 	languages: LanguageType[];
@@ -12,6 +12,6 @@ export type ComparisonCountryInfoType = {
 };
 
 export type ComparisonCountriesPageStateType = {
-	firstCountry: ComparisonCountryInfoType | {};
-	secondCountry: ComparisonCountryInfoType | {};
+	firstCountry?: ComparisonCountryInfoType;
+	secondCountry?: ComparisonCountryInfoType;
 };

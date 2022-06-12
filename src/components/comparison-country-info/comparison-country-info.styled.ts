@@ -1,7 +1,51 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.label`
+type InfoItemProps = {
+	color?: 'red' | 'green' | 'default';
+};
+
+export const BlockWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+`;
+
+export const SelectLabel = styled.label`
 	display: flex;
 	align-items: center;
 	column-gap: 2rem;
+	margin-bottom: 1.5rem;
+`;
+
+export const InfoWrapper = styled.section`
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.5rem;
+`;
+
+export const Flag = styled.img`
+	width: 100%;
+	height: 250px;
+`;
+
+export const InfoList = styled.ul`
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.5rem;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+`;
+
+export const InfoItem = styled.li<InfoItemProps>`
+	font-weight: var(--fw-normal);
+
+	& > span {
+		color: ${(props) =>
+			props.color && props.color !== 'default'
+				? props.color === 'green'
+					? '#02d302'
+					: '#cd0707'
+				: 'var(--colors-text)'};
+		font-weight: var(--fw-light);
+	}
 `;
