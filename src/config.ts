@@ -13,5 +13,5 @@ export const COUNTRY_NEIGHBORS_URL = (codes: string[]) => {
 };
 
 export const COMPARISON_COUNTRY_URL = (name: string) => {
-	return `${BASE_URL}name/${name}?fields=name,flags,population,area,currencies,languages,borders`;
+	return `${BASE_URL}name/${name}?fields=name,flags,population,area,currencies,languages`;
 };

@@ -53,10 +53,10 @@ export const ComparisonCountryInfo = ({
 			</SelectLabel>
 			{renderInfo && (
 				<InfoWrapper>
-					<Flag src={renderInfo?.flags.png} alt={renderInfo?.name} />
+					<Flag src={renderInfo.flag} alt={renderInfo.name} />
 					<InfoList>
 						<InfoItem>
-							Name: <span>{renderInfo?.name}</span>
+							Name: <span>{renderInfo.name}</span>
 						</InfoItem>
 						<InfoItem
 							color={
@@ -64,7 +64,7 @@ export const ComparisonCountryInfo = ({
 								comparsion(renderInfo.population, comparisonInfo.population)
 							}
 						>
-							Population: <span>{renderInfo?.population}</span>
+							Population: <span>{renderInfo.population}</span>
 						</InfoItem>
 						<InfoItem
 							color={
@@ -78,39 +78,23 @@ export const ComparisonCountryInfo = ({
 							color={
 								comparisonInfo &&
 								comparsion(
-									renderInfo?.currencies.length,
-									comparisonInfo?.currencies.length
+									renderInfo.currencies.length,
+									comparisonInfo.currencies.length
 								)
 							}
 						>
-							Currencies:{' '}
-							<span>{renderInfo?.currencies.map((item) => item.name)}</span>
+							Currencies: <span>{renderInfo.currencies.join(', ')}</span>
 						</InfoItem>
 						<InfoItem
 							color={
 								comparisonInfo &&
 								comparsion(
-									renderInfo?.languages.length,
-									comparisonInfo?.languages.length
+									renderInfo.languages.length,
+									comparisonInfo.languages.length
 								)
 							}
 						>
-							Languages:{' '}
-							<span>{renderInfo?.languages.map((item) => item.name)}</span>
-						</InfoItem>
-						<InfoItem
-							color={
-								comparisonInfo &&
-								comparsion(
-									renderInfo?.borders?.length,
-									comparisonInfo?.borders?.length
-								)
-							}
-						>
-							Borders:{' '}
-							<span>
-								{renderInfo?.borders && renderInfo.borders.join(', ')}
-							</span>
+							Languages: <span>{renderInfo.languages.join(', ')}</span>
 						</InfoItem>
 					</InfoList>
 				</InfoWrapper>
