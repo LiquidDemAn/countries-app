@@ -1,6 +1,6 @@
-export type FilterOptionType = { value: string; label: string };
+import { SelectOptionType } from './../../typedef';
 
-export const filterOptions: FilterOptionType[] = [
+export const filterOptions: SelectOptionType[] = [
 	{ value: 'Africa', label: 'Africa' },
 	{ value: 'America', label: 'America' },
 	{ value: 'Asia', label: 'Asia' },

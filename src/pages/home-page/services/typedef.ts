@@ -1,14 +1,11 @@
-import { ListItemType } from '../../../typedef';
+import { ListItemType, FlagType } from '../../../typedef';
 
 export type AllCountriesType = {
 	name: string;
 	capital: string;
 	region: string;
 	population: number;
-	flags: {
-		svg: string;
-		png: string;
-	};
+	flags: FlagType;
 	independent: boolean;
 };
 

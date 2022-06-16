@@ -6,6 +6,7 @@ import { NotFoundPage } from './pages/not-found-page';
 import { CountryPage } from './pages/country-page';
 import { Layout } from './components/layout';
 import { RandomCountryPage } from './pages/random-country-page';
+import { ComparisonCountriesPage } from './pages/comparison-countries-page';
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 				<Route path='/' element={<Layout />}>
 					<Route index element={<HomePage />} />
 					<Route path='random-country' element={<RandomCountryPage />} />
+					<Route path='comparison-countries' element={<ComparisonCountriesPage />} />
 					<Route path='country/:name' element={<CountryPage />} />
 					<Route path='*' element={<NotFoundPage />} />
 				</Route>

@@ -3,18 +3,18 @@ import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { loadAllCountries } from './services/actions';
 import { getAllCountries, getFilteredCountries } from './services/selectors';
 import { Main } from '../../components/main';
-import { FilterOptionType } from '../../components/filter/filter-options';
 import { Controls } from '../../components/controls';
 import { Search } from '../../components/search';
 import { FilterSelect } from '../../components/filter';
 import { filterOptions } from '../../components/filter/filter-options';
 import { CountriesList } from '../../components/countries-list';
+import { SelectOptionType } from '../../typedef';
 
 export const HomePage = () => {
 	const dispatch = useAppDispatch();
 	const countries = useAppSelector(getAllCountries);
 	const [search, setSearch] = useState('');
-	const [region, setRegion] = useState<null | FilterOptionType>(null);
+	const [region, setRegion] = useState<null | SelectOptionType>(null);
 
 	const filteredCountries = useAppSelector((state) =>
 		getFilteredCountries(state, region, search)
@@ -25,7 +25,7 @@ export const HomePage = () => {
 	};
 
 	const handlerFilter = (newValue: unknown) => {
-		setRegion(newValue as FilterOptionType);
+		setRegion(newValue as SelectOptionType);
 	};
 
 	useEffect(() => {
@@ -47,7 +47,11 @@ export const HomePage = () => {
 					onChange={handlerFilter}
 				/>
 			</Controls>
-			<CountriesList countries={filteredCountries} />
+			{filteredCountries.length ? (
+				<CountriesList countries={filteredCountries} />
+			) : (
+				<p>No countries found</p>
+			)}
 		</Main>
 	);
 };

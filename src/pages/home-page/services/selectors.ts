@@ -1,4 +1,4 @@
-import { FilterOptionType } from '../../../components/filter/filter-options';
+import { SelectOptionType } from './../../../typedef';
 import { CountryCardType } from './typedef';
 import { AppState } from '../../../store/typedef';
 
@@ -6,7 +6,7 @@ export const getAllCountries = (state: AppState) => state.homepage.allCountries;
 
 export const getFilteredCountries = (
 	state: AppState,
-	region: null | FilterOptionType,
+	region: null | SelectOptionType,
 	search: string
 ): CountryCardType[] => {
 	let countries = getAllCountries(state);
