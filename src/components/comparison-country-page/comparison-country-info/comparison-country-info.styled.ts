@@ -4,6 +4,9 @@ type InfoItemProps = {
 	color?: 'red' | 'green' | 'default';
 };
 
+const green = '#02d302';
+const red = '#cd0707';
+
 export const BlockWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -53,15 +56,15 @@ export const InfoList = styled.ul`
 
 export const InfoItem = styled.li<InfoItemProps>`
 	display: flex;
-	column-gap: 10px;
+	column-gap: 0.5rem;
 	font-weight: var(--fw-normal);
 
 	& > span {
 		color: ${(props) =>
 			props.color && props.color !== 'default'
 				? props.color === 'green'
-					? '#02d302'
-					: '#cd0707'
+					? `${green}`
+					: `${red}`
 				: 'var(--colors-text)'};
 		font-weight: var(--fw-light);
 	}
