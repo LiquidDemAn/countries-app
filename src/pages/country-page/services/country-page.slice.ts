@@ -14,7 +14,7 @@ export const countryPageSlice = createSlice({
 	extraReducers: (bulider) =>
 		bulider
 			.addCase(loadCountryInfo.fulfilled, (state, { payload }) => {
-				state.countryInfo = groupeCountryInfo(payload)
+				state.countryInfo = groupeCountryInfo(payload);
 			})
 			.addCase(loadCountryNeighbors.fulfilled, (state, { payload }) => {
 				state.countryNeighbors = payload || [];

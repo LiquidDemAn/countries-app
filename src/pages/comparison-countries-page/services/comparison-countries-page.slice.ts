@@ -1,5 +1,5 @@
-import { loadFirstCountry, loadSecondCountry } from './actions';
 import { createSlice } from '@reduxjs/toolkit';
+import { loadFirstCountry, loadSecondCountry } from './actions';
 import { ComparisonCountriesPageStateType } from './typedef';
 
 const initialState: ComparisonCountriesPageStateType = {};

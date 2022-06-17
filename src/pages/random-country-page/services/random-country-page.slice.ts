@@ -1,6 +1,6 @@
+import { createSlice } from '@reduxjs/toolkit';
 import { groupeCountryInfo } from './../../../functions/groupe-country-info';
 import { loadRandomCountry, loadRandomCountryNeighbors } from './actions';
-import { createSlice } from '@reduxjs/toolkit';
 import { RandomCountryPageStateType } from './typedef';
 
 const initialState: RandomCountryPageStateType = {

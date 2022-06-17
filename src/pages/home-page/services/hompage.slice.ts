@@ -1,5 +1,5 @@
-import { loadAllCountries } from './actions';
 import { createSlice } from '@reduxjs/toolkit';
+import { loadAllCountries } from './actions';
 import { HomePageStateType } from './typedef';
 
 const initialState: HomePageStateType = {

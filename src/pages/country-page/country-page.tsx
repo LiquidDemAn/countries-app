@@ -3,10 +3,10 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { IoArrowBack } from 'react-icons/io5';
 import { ButtonBack } from '../../components/country-page/button-back';
 import { Main } from '../../components/common/main';
+import { CountryInfo } from '../../components/common/country-info';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { loadCountryInfo, loadCountryNeighbors } from './services/actions';
 import { getCountryInfo, getCountryNeighbors } from './services/selectors';
-import { CountryInfo } from '../../components/common/country-info';
 
 export const CountryPage = () => {
 	const dispatch = useAppDispatch();

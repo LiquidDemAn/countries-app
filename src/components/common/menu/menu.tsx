@@ -1,8 +1,8 @@
 import { useState } from 'react';
+import { Menu } from '@mui/material';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import { MenuIcon, LinkWrapper } from './menu.styled';
-import { Menu } from '@mui/material';
 
 export const MenuComponent = () => {
 	const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);

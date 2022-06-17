@@ -1,8 +1,8 @@
+import axios from 'axios';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 import { SelectOptionType } from './../../../typedef';
 import { COMPARISON_COUNTRY_URL } from './../../../config';
-import axios from 'axios';
 import { ComparisonCountryInfoType, ComparisonCountryServerInfoType } from './typedef';
-import { createAsyncThunk } from '@reduxjs/toolkit';
 
 const comparisonCountryInfo = ({
 	name,

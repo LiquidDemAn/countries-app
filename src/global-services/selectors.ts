@@ -1,5 +1,5 @@
-import { AppState } from './../store/typedef';
 import { SelectOptionType } from '../typedef';
+import { AppState } from './../store/typedef';
 
 export const getCountriesNames = (state: AppState) => state.global.countriesNames;
 

@@ -15,7 +15,10 @@ function App() {
 				<Route path='countries-app/' element={<Layout />}>
 					<Route index element={<HomePage />} />
 					<Route path='random-country' element={<RandomCountryPage />} />
-					<Route path='comparison-countries' element={<ComparisonCountriesPage />} />
+					<Route
+						path='comparison-countries'
+						element={<ComparisonCountriesPage />}
+					/>
 					<Route path='country/:name' element={<CountryPage />} />
 					<Route path='*' element={<NotFoundPage />} />
 				</Route>

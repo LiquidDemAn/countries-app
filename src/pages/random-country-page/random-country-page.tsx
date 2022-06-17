@@ -1,21 +1,21 @@
-import { Main } from '../../components/common/main';
-import { getRandomIndex } from './../../functions/random-index';
+import { useEffect } from 'react';
 import { IoDice } from 'react-icons/io5';
 import { useNavigate } from 'react-router-dom';
+import { Main } from '../../components/common/main';
+import { useAppDispatch, useAppSelector } from '../../store/hooks';
+import { getCountriesNames } from '../../global-services/selectors';
+import { CountryInfo } from '../../components/common/country-info';
+import { loadCountriesNames } from '../../global-services/actions';
+import { getRandomIndex } from './../../functions/random-index';
 import {
 	getRandomCountry,
 	getRandomCountryNeighbors,
 } from './services/selectors';
-import { useAppDispatch, useAppSelector } from '../../store/hooks';
-import { useEffect } from 'react';
 import {
 	loadRandomCountry,
 	loadRandomCountryNeighbors,
 } from './services/actions';
-import { getCountriesNames } from '../../global-services/selectors';
-import { CountryInfo } from '../../components/common/country-info';
 import { TitleWrapper } from './random-country-page.styled';
-import { loadCountriesNames } from '../../global-services/actions';
 
 export const RandomCountryPage = () => {
 	const dispatch = useAppDispatch();

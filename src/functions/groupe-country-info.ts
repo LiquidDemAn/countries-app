@@ -1,5 +1,5 @@
-import { CountryInfoFromServerType } from './../pages/country-page/services/typedef';
 import { CountryInfoType } from '../pages/country-page/services/typedef';
+import { CountryInfoFromServerType } from './../pages/country-page/services/typedef';
 
 export const groupeCountryInfo = (payload: CountryInfoFromServerType): CountryInfoType => {
 	return {

@@ -1,7 +1,7 @@
 import axios from 'axios';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 import { CountryInfoFromServerType } from '../../country-page/services/typedef';
 import { COUNTRY_URL, COUNTRY_NEIGHBORS_URL } from './../../../config';
-import { createAsyncThunk } from '@reduxjs/toolkit';
 
 export const loadRandomCountry = createAsyncThunk<
 	CountryInfoFromServerType,

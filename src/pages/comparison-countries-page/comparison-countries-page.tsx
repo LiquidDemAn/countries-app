@@ -4,9 +4,9 @@ import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { loadCountriesNames } from '../../global-services/actions';
 import { getCountriesNamesOptions } from '../../global-services/selectors';
 import { ComparisonCountryInfo } from '../../components/comparison-country-page/comparison-country-info';
+import { SelectOptionType } from '../../typedef';
 import { ComparisonCountriesWrapper } from './comparison-countries-page.styled';
 import { loadFirstCountry, loadSecondCountry } from './services/actions';
-import { SelectOptionType } from '../../typedef';
 import { getFirstCountry, getSecondCountry } from './services/selectors';
 
 export const ComparisonCountriesPage = () => {
