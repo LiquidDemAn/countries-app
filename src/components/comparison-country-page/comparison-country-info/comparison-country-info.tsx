@@ -1,4 +1,4 @@
-import { SelectOptionType } from '../../typedef';
+import { SelectOptionType } from '../../../typedef';
 import { CountiresSelect } from '../countries-select';
 import {
 	InfoWrapper,
@@ -8,7 +8,7 @@ import {
 	InfoList,
 	InfoItem,
 } from './comparison-country-info.styled';
-import { ComparisonCountryInfoType } from '../../pages/comparison-countries-page/services/typedef';
+import { ComparisonCountryInfoType } from '../../../pages/comparison-countries-page/services/typedef';
 
 type Props = {
 	renderInfo?: ComparisonCountryInfoType;

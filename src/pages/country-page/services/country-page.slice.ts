@@ -7,7 +7,7 @@ const initialState: CountryPageStateType = {
 	countryNeighbors: [],
 };
 
-export const countryPage = createSlice({
+export const countryPageSlice = createSlice({
 	name: 'country-page',
 	initialState,
 	reducers: {},

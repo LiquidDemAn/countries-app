@@ -2,7 +2,7 @@ import { SelectOptionType } from './../../../typedef';
 import { CountryCardType } from './typedef';
 import { AppState } from '../../../store/typedef';
 
-export const getAllCountries = (state: AppState) => state.homepage.allCountries;
+export const getAllCountries = (state: AppState) => state.homePage.allCountries;
 
 export const getFilteredCountries = (
 	state: AppState,

@@ -4,7 +4,7 @@ import { ComparisonCountriesPageStateType } from './typedef';
 
 const initialState: ComparisonCountriesPageStateType = {};
 
-export const comparisonCountriesPage = createSlice({
+export const comparisonCountriesPageSlice = createSlice({
 	name: 'comparison-countries-page',
 	initialState,
 	reducers: {},

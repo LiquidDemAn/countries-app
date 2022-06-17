@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { IoArrowBack } from 'react-icons/io5';
-import { Button } from '../../components/button';
-import { Main } from '../../components/main';
+import { ButtonBack } from '../../components/country-page/button-back';
+import { Main } from '../../components/common/main';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { loadCountryInfo, loadCountryNeighbors } from './services/actions';
 import { getCountryInfo, getCountryNeighbors } from './services/selectors';
-import { CountryInfo } from '../../components/country-info';
+import { CountryInfo } from '../../components/country-page/country-info';
 
 export const CountryPage = () => {
 	const dispatch = useAppDispatch();
@@ -29,10 +29,10 @@ export const CountryPage = () => {
 
 	return (
 		<Main>
-			<Button onClick={goBack}>
+			<ButtonBack onClick={goBack}>
 				<IoArrowBack />
 				Back
-			</Button>
+			</ButtonBack>
 			<>
 				{country && (
 					<CountryInfo

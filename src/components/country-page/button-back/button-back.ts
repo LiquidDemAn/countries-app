@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Button = styled.button`
+export const ButtonBack = styled.button`
 	display: flex;
 	align-items: center;
 	column-gap: 0.75rem;

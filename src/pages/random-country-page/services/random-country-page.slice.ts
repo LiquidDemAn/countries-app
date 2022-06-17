@@ -7,7 +7,7 @@ const initialState: RandomCountryPageStateType = {
 	neighbors: [],
 };
 
-export const randomCountryPage = createSlice({
+export const randomCountryPageSlice = createSlice({
 	initialState,
 	name: 'random-country-page',
 	reducers: {},

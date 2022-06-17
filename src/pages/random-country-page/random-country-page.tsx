@@ -1,4 +1,4 @@
-import { Main } from '../../components/main';
+import { Main } from '../../components/common/main';
 import { getRandomIndex } from './../../functions/random-index';
 import { IoDice } from 'react-icons/io5';
 import { useNavigate } from 'react-router-dom';
@@ -13,7 +13,7 @@ import {
 	loadRandomCountryNeighbors,
 } from './services/actions';
 import { getCountriesNames } from '../../global-services/selectors';
-import { CountryInfo } from '../../components/country-info';
+import { CountryInfo } from '../../components/country-page/country-info';
 import { TitleWrapper } from './random-country-page.styled';
 import { loadCountriesNames } from '../../global-services/actions';
 

@@ -1,4 +1,4 @@
-import { CountryCardType } from '../../pages/home-page/services/typedef';
+import { CountryCardType } from '../../../pages/home-page/services/typedef';
 import {
 	CardBody,
 	CardImage,
