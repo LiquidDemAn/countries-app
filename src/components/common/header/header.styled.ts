@@ -14,7 +14,7 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const HeaderTitle = styled(Link).attrs({
-	to: '/',
+	to: '',
 })`
 	display: none;
 	color: var(--colors-text);
@@ -22,7 +22,7 @@ export const HeaderTitle = styled(Link).attrs({
 	text-decoration: none;
 	font-weight: var(--fw-bold);
 
-	@media(min-width: 767px) {
+	@media (min-width: 767px) {
 		display: block;
 	}
 `;
