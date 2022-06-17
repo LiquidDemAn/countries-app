@@ -1,4 +1,4 @@
-import { SelectOptionType } from './../../typedef';
+import { SelectOptionType } from '../../../typedef';
 
 export const filterOptions: SelectOptionType[] = [
 	{ value: 'Africa', label: 'Africa' },

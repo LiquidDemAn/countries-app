@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Main } from '../../components/main';
+import { Main } from '../../components/common/main';
 
 export const NotFoundPage = () => {
 	return (

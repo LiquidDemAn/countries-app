@@ -1,5 +1,5 @@
 import { NavigateFunction } from 'react-router-dom';
-import { CountryInfoType } from '../../pages/country-page/services/typedef';
+import { CountryInfoType } from '../../../pages/country-page/services/typedef';
 import {
 	Wrapper,
 	InfoWrapper,
