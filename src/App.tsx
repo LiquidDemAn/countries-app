@@ -4,15 +4,15 @@ import { store } from './store/store';
 import { HomePage } from './pages/home-page';
 import { NotFoundPage } from './pages/not-found-page';
 import { CountryPage } from './pages/country-page';
-import { Layout } from './components/common/layout';
 import { RandomCountryPage } from './pages/random-country-page';
 import { ComparisonCountriesPage } from './pages/comparison-countries-page';
+import { Layout } from './components/common/layout';
 
 function App() {
 	return (
 		<Provider store={store}>
 			<Routes>
-				<Route path='/' element={<Layout />}>
+				<Route path='countries-app/' element={<Layout />}>
 					<Route index element={<HomePage />} />
 					<Route path='random-country' element={<RandomCountryPage />} />
 					<Route path='comparison-countries' element={<ComparisonCountriesPage />} />
