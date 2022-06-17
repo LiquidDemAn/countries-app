@@ -13,7 +13,7 @@ import {
 	loadRandomCountryNeighbors,
 } from './services/actions';
 import { getCountriesNames } from '../../global-services/selectors';
-import { CountryInfo } from '../../components/country-page/country-info';
+import { CountryInfo } from '../../components/common/country-info';
 import { TitleWrapper } from './random-country-page.styled';
 import { loadCountriesNames } from '../../global-services/actions';
 

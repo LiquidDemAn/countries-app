@@ -6,7 +6,7 @@ import { Main } from '../../components/common/main';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { loadCountryInfo, loadCountryNeighbors } from './services/actions';
 import { getCountryInfo, getCountryNeighbors } from './services/selectors';
-import { CountryInfo } from '../../components/country-page/country-info';
+import { CountryInfo } from '../../components/common/country-info';
 
 export const CountryPage = () => {
 	const dispatch = useAppDispatch();
