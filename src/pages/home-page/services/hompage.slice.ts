@@ -6,8 +6,8 @@ const initialState: HomePageStateType = {
 	allCountries: [],
 };
 
-export const homepage = createSlice({
-	name: 'homepage',
+export const homePageSlice = createSlice({
+	name: 'home-page',
 	initialState,
 	reducers: {},
 	extraReducers: (builder) =>
@@ -15,5 +15,3 @@ export const homepage = createSlice({
 			state.allCountries = payload;
 		}),
 });
-
-// export const {} = homepage.actions;
