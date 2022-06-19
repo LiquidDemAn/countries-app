@@ -65,6 +65,7 @@ export const ListGroup = styled.div`
 	justify-content: space-between;
 	flex-direction: column;
 	row-gap: 2rem;
+	column-gap: 1rem;
 
 	@media (min-width: 576px) {
 		flex-direction: row;

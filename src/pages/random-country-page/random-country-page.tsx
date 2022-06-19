@@ -25,7 +25,7 @@ export const RandomCountryPage = () => {
 	const countriesNames = useAppSelector(getCountriesNames);
 	const country = useAppSelector(getRandomCountry);
 	const neighbors = useAppSelector(getRandomCountryNeighbors);
-	const loading = useAppSelector(getRandomCountryLoading)
+	const loading = useAppSelector(getRandomCountryLoading);
 
 	const toggle = () => {
 		const randomIndex = getRandomIndex(countriesNames.length);

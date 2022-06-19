@@ -2,6 +2,7 @@ import { AppState } from '../../../store/typedef';
 import { SelectOptionType } from './../../../typedef';
 import { CountryCardType } from './typedef';
 
+export const getHomePageLoading = (state: AppState) => state.homePage.loading;
 export const getAllCountries = (state: AppState) => state.homePage.allCountries;
 
 export const getFilteredCountries = (
