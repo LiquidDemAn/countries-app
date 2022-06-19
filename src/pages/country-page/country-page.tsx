@@ -5,13 +5,19 @@ import { ButtonBack } from '../../components/country-page/button-back';
 import { Main } from '../../components/common/main';
 import { CountryInfo } from '../../components/common/country-info';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
+import { Loader } from '../../components/common/container/loader';
 import { loadCountryInfo, loadCountryNeighbors } from './services/actions';
-import { getCountryInfo, getCountryNeighbors } from './services/selectors';
+import {
+	getCountryInfo,
+	getCountryNeighbors,
+	getCountryPageLoading,
+} from './services/selectors';
 
 export const CountryPage = () => {
 	const dispatch = useAppDispatch();
 	const { name } = useParams();
 	const navigate = useNavigate();
+	const loading = useAppSelector(getCountryPageLoading);
 	const country = useAppSelector(getCountryInfo);
 	const countryNeighbors = useAppSelector(getCountryNeighbors);
 
@@ -28,20 +34,23 @@ export const CountryPage = () => {
 	}, [country?.borders, dispatch]);
 
 	return (
-		<Main>
-			<ButtonBack onClick={goBack}>
-				<IoArrowBack />
-				Back
-			</ButtonBack>
-			<>
-				{country && (
-					<CountryInfo
-						neighbors={countryNeighbors}
-						navigate={navigate}
-						country={country}
-					/>
-				)}
-			</>
-		</Main>
+		<>
+			<Main>
+				<ButtonBack onClick={goBack}>
+					<IoArrowBack />
+					Back
+				</ButtonBack>
+				<>
+					{country && (
+						<CountryInfo
+							neighbors={countryNeighbors}
+							navigate={navigate}
+							country={country}
+						/>
+					)}
+				</>
+			</Main>
+			<Loader isLoading={loading} />
+		</>
 	);
 };
