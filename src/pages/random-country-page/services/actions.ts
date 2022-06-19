@@ -14,7 +14,12 @@ export const loadRandomCountry = createAsyncThunk<
 export const loadRandomCountryNeighbors = createAsyncThunk<string[], string[]>(
 	'random-country-page/load-country-neighbors',
 	async (codes) => {
-		const response = await axios.get(COUNTRY_NEIGHBORS_URL(codes));
-		return await response.data.map((item: { name: string }) => item.name);
+		if (codes.length) {
+			const response = await axios.get(COUNTRY_NEIGHBORS_URL(codes));
+			return await response.data.map((item: { name: string }) => item.name);
+		} else {
+			return [];
+		}
 	}
+	
 );

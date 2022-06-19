@@ -21,7 +21,11 @@ export const randomCountryPageSlice = createSlice({
 				state.country = groupeCountryInfo(payload);
 				state.loading = false;
 			})
+			.addCase(loadRandomCountryNeighbors.pending, (state) => {
+				state.loading = true;
+			})
 			.addCase(loadRandomCountryNeighbors.fulfilled, (state, { payload }) => {
 				state.neighbors = payload;
+				state.loading = false;
 			}),
 });
