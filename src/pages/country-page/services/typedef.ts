@@ -1,4 +1,9 @@
-import { ListItemType, FlagType, CurrencieType, LanguageType } from '../../../typedef';
+import {
+	ListItemType,
+	FlagType,
+	CurrencieType,
+	LanguageType,
+} from '../../../typedef';
 
 export type CountryInfoFromServerType = {
 	name: string;
@@ -24,6 +29,7 @@ export type CountryInfoType = {
 };
 
 export type CountryPageStateType = {
+	loading: boolean;
 	countryInfo?: CountryInfoType;
 	countryNeighbors: string[];
 };

@@ -20,6 +20,7 @@ export type ComparisonCountryInfoType = {
 };
 
 export type ComparisonCountriesPageStateType = {
+	loading: boolean;
 	firstCountry?: ComparisonCountryInfoType;
 	secondCountry?: ComparisonCountryInfoType;
 };

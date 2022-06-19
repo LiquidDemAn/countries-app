@@ -53,16 +53,20 @@ export const CountryInfo = ({ country, neighbors, navigate }: Props) => {
 				</ListGroup>
 				<Borders>
 					<BordersTitle>Border Countries:</BordersTitle>
-					<BordersList>
-						{neighbors.map((name) => (
-							<BorderListItem
-								key={name}
-								onClick={() => navigate(`/countries-app/country/${name}`)}
-							>
-								{name}
-							</BorderListItem>
-						))}
-					</BordersList>
+					{neighbors.length ? (
+						<BordersList>
+							{neighbors.map((name) => (
+								<BorderListItem
+									key={name}
+									onClick={() => navigate(`/countries-app/country/${name}`)}
+								>
+									{name}
+								</BorderListItem>
+							))}
+						</BordersList>
+					) : (
+						<span>There are no borders</span>
+					)}
 				</Borders>
 			</InfoWrapper>
 		</Wrapper>

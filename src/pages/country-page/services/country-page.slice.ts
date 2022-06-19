@@ -4,6 +4,7 @@ import { loadCountryInfo, loadCountryNeighbors } from './actions';
 import { CountryPageStateType } from './typedef';
 
 const initialState: CountryPageStateType = {
+	loading: false,
 	countryNeighbors: [],
 };
 
@@ -13,8 +14,12 @@ export const countryPageSlice = createSlice({
 	reducers: {},
 	extraReducers: (bulider) =>
 		bulider
+			.addCase(loadCountryInfo.pending, (state) => {
+				state.loading = true;
+			})
 			.addCase(loadCountryInfo.fulfilled, (state, { payload }) => {
 				state.countryInfo = groupeCountryInfo(payload);
+				state.loading = false;
 			})
 			.addCase(loadCountryNeighbors.fulfilled, (state, { payload }) => {
 				state.countryNeighbors = payload || [];

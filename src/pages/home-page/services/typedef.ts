@@ -16,5 +16,6 @@ export type CountryCardType = {
 };
 
 export type HomePageStateType = {
+	loading: boolean;
 	allCountries: AllCountriesType[];
 };

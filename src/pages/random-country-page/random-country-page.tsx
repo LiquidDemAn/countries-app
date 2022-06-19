@@ -4,11 +4,13 @@ import { useNavigate } from 'react-router-dom';
 import { Main } from '../../components/common/main';
 import { useAppDispatch, useAppSelector } from '../../store/hooks';
 import { getCountriesNames } from '../../global-services/selectors';
+import { Loader } from '../../components/common/container/loader';
 import { CountryInfo } from '../../components/common/country-info';
 import { loadCountriesNames } from '../../global-services/actions';
 import { getRandomIndex } from './../../functions/random-index';
 import {
 	getRandomCountry,
+	getRandomCountryLoading,
 	getRandomCountryNeighbors,
 } from './services/selectors';
 import {
@@ -23,6 +25,7 @@ export const RandomCountryPage = () => {
 	const countriesNames = useAppSelector(getCountriesNames);
 	const country = useAppSelector(getRandomCountry);
 	const neighbors = useAppSelector(getRandomCountryNeighbors);
+	const loading = useAppSelector(getRandomCountryLoading);
 
 	const toggle = () => {
 		const randomIndex = getRandomIndex(countriesNames.length);
@@ -56,6 +59,7 @@ export const RandomCountryPage = () => {
 					/>
 				)}
 			</>
+			<Loader isLoading={loading} />
 		</Main>
 	);
 };
