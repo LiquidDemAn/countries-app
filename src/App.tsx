@@ -12,7 +12,7 @@ function App() {
 	return (
 		<Provider store={store}>
 			<Routes>
-				<Route path='countries-app/' element={<Layout />}>
+				<Route path='/' element={<Layout />}>
 					<Route index element={<HomePage />} />
 					<Route path='random-country' element={<RandomCountryPage />} />
 					<Route
