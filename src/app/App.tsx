@@ -1,12 +1,12 @@
 import { Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { store } from './store/store';
-import { HomePage } from './pages/home-page';
-import { NotFoundPage } from './pages/not-found-page';
-import { CountryPage } from './pages/country-page';
-import { RandomCountryPage } from './pages/random-country-page';
-import { ComparisonCountriesPage } from './pages/comparison-countries-page';
-import { Layout } from './components/common/layout';
+import { store } from '../store/store';
+import { HomePage } from '../pages/home-page';
+import { NotFoundPage } from '../pages/not-found-page';
+import { CountryPage } from '../pages/country-page';
+import { RandomCountryPage } from '../pages/random-country-page';
+import { ComparisonCountriesPage } from '../pages/comparison-countries-page';
+import { Layout } from '../components/common/layout';
 
 function App() {
 	return (

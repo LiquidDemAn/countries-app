@@ -54,11 +54,8 @@ export const HomePage = () => {
 						onChange={handlerFilter}
 					/>
 				</Controls>
-				{filteredCountries.length ? (
-					<CountriesList countries={filteredCountries} />
-				) : (
-					<p>No countries found</p>
-				)}
+
+				<CountriesList countries={filteredCountries} />
 			</Main>
 
 			<Loader isLoading={loading} />
