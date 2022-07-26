@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { ReactElement } from 'react';
 import { render, screen } from '@testing-library/react';
 import { HashRouter } from 'react-router-dom';
+import { CountryCardType } from '../pages/home-page/services/typedef';
 import { store } from './../store/store';
 import '@testing-library/jest-dom';
 import App from './App';
@@ -10,6 +11,20 @@ import App from './App';
 export const renderWrapper = (component: ReactElement | ReactElement[]) => {
 	render(<Provider store={store}>{component}</Provider>);
 };
+
+export const fakeCountries: CountryCardType[] = [
+	{
+		name: 'Afghanistan',
+		flag: '',
+		info: [],
+	},
+
+	{
+		name: 'Åland Islands',
+		flag: '',
+		info: [],
+	},
+];
 
 describe('App component', () => {
 	it('renders title', () => {

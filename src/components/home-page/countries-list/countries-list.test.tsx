@@ -1,21 +1,7 @@
 import { screen, render } from '@testing-library/react';
 import { HashRouter } from 'react-router-dom';
-import { CountryCardType } from '../../../pages/home-page/services/typedef';
+import { fakeCountries } from '../../../app/App.test';
 import { CountriesList } from './countries-list';
-
-const fakeCountries: CountryCardType[] = [
-	{
-		name: 'Afghanistan',
-		flag: '',
-		info: [],
-	},
-
-	{
-		name: 'Åland Islands',
-		flag: '',
-		info: [],
-	},
-];
 
 describe('CountriesList component', () => {
 	it('countries list is empty', () => {
