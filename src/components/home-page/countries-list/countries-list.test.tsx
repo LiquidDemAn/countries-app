@@ -18,7 +18,7 @@ const fakeCountries: CountryCardType[] = [
 ];
 
 describe('CountriesList component', () => {
-	it('countries array is empty', () => {
+	it('countries list is empty', () => {
 		render(<CountriesList countries={[]} />);
 		expect(screen.getByText(/No countries found/i)).toBeInTheDocument();
 	});

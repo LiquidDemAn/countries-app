@@ -9,8 +9,6 @@ type Props = {
 };
 
 export const CountriesList = ({ countries }: Props) => {
-
-
 	return (
 		<>
 			{countries.length ? (
