@@ -73,4 +73,30 @@ describe('App component', () => {
 
 		expect(screen.getByText(/filter/i)).toBeInTheDocument();
 	});
+
+	it('moved from comparison page to home page by clicking on header title', () => {
+		renderWrapper(
+			<HashRouter>
+				<App />
+			</HashRouter>
+		);
+
+		userEvent.click(screen.getByRole('button'));
+		expect(screen.getByRole('menu')).toBeInTheDocument();
+
+		const comparisonLink = screen.getByRole('link', {
+			name: 'ComparisonCountries',
+		});
+		expect(comparisonLink).toBeInTheDocument();
+		userEvent.click(comparisonLink);
+
+		expect(screen.getByText(/First Country/i)).toBeInTheDocument();
+
+		const headerTitle = screen.getByText(/Where is the world?/i);
+		expect(headerTitle).toBeInTheDocument();
+		userEvent.click(headerTitle);
+
+		expect(screen.queryByText(/First Country/i)).toBeNull();
+		expect(screen.getByText(/filter/i)).toBeInTheDocument();
+	});
 });
