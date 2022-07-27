@@ -10,16 +10,22 @@ type Props = {
 
 export const CountriesList = ({ countries }: Props) => {
 	return (
-		<CountriesListWrapper>
-			<>
-				{countries.map((country) => (
-					<Link key={country.name} to={`country/${country.name}`}>
-						<CountryCard country={country} />
-					</Link>
-				))}
-				<CardEmptyElement />
-				<CardEmptyElement />
-			</>
-		</CountriesListWrapper>
+		<>
+			{countries.length ? (
+				<CountriesListWrapper>
+					<>
+						{countries.map((country) => (
+							<Link key={country.name} to={`country/${country.name}`}>
+								<CountryCard country={country} />
+							</Link>
+						))}
+						<CardEmptyElement />
+						<CardEmptyElement />
+					</>
+				</CountriesListWrapper>
+			) : (
+				<p>No countries found</p>
+			)}
+		</>
 	);
 };

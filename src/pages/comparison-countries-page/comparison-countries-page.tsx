@@ -8,7 +8,11 @@ import { ComparisonCountryInfo } from '../../components/comparison-country-page/
 import { SelectOptionType } from '../../typedef';
 import { ComparisonCountriesWrapper } from './comparison-countries-page.styled';
 import { loadFirstCountry, loadSecondCountry } from './services/actions';
-import { getComparisonCountriesPageLoading, getFirstCountry, getSecondCountry } from './services/selectors';
+import {
+	getComparisonCountriesPageLoading,
+	getFirstCountry,
+	getSecondCountry,
+} from './services/selectors';
 
 export const ComparisonCountriesPage = () => {
 	const dispatch = useAppDispatch();
